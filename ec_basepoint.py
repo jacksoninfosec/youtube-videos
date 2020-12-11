@@ -88,7 +88,6 @@ Q = P224.multiple(n, G)
 print(Q == INF_POINT)
 
 
-print(P224.is_point_on_curve(Gx, Gy))
 
 
 
