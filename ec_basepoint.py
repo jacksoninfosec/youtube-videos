@@ -60,7 +60,7 @@ class EllipticCurve:
 	def inverse_modp(self, x):
 		if self.reduce_modp(x) == 0:
 			return None
-		return pow(x, p - 2, p)
+		return pow(x, self.p - 2, self.p)
 
 
 p = 26959946667150639794667015087019630673557916260026308143510066298881
