@@ -2,7 +2,7 @@
 
 
 # x and y are nonnegative integers 
-# Their associated binary polynomails are multiplied. 
+# Their associated binary polynomials are multiplied. 
 # The associated integer to this prodcut is returned. 
 def multiply_ints_as_polynomials(x, y):
 	if x == 0 or y == 0:
