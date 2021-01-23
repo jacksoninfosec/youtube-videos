@@ -50,7 +50,7 @@ def rijndael_multiplication(x, y):
 
 # x is 8-bits
 # The output value is 8-bits
-# Here we find the inverse just through a brute force search.
+# We find the inverse just through a brute force search.
 def rijndael_inverse(x):
 	if x == 0:
 		return 0
