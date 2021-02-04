@@ -9,6 +9,7 @@ def index(x):
 	col = (x >> 1) & 0xf  # inner 4-bits of x
 	return row * 16 + col  # calculate the list index
 
+# For these definitions see https://en.wikipedia.org/wiki/DES_supplementary_material 
 s1 = [14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7,
       0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8,
       4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0,
@@ -55,10 +56,18 @@ s = [s1, s2, s3, s4, s5, s6, s7, s8]
 # i is in {1,...,8}
 def S(i, x):
 	return s[i - 1][index(x)]
-  
+
+# test
 print(S(5, 27))  # should be 9
 print()
 
+#---------------------------------------------------
+# We can reorder the lists so that the input x can
+# be used as the array index to get the output.
+
+# Using these lists instead we can give an 
+# implementation of the S-boxes without the 
+# index function.
 def print_lists_in_natural_order():
    for a in s:
       print([a[index(i)] for i in range(64)])
