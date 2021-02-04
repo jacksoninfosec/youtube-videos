@@ -32,7 +32,7 @@ def tonelli_shanks(n, p):
 		return pow(n, (p + 1)//4, p)
 
 	# So now p=1(mod 4) but this is not used in the algorithm.
-	# Write p - 1 = (2^S)Q
+	# Write p - 1 = (2^S)Q, where Q is odd
 	Q = p - 1
 	S = 0
 	while Q % 2 == 0:
