@@ -1,3 +1,5 @@
+# Implementation of a P-Box
+
 # n is the number of bits
 # P is a list of integers of length m
 # The integers in P are between 1 and n
